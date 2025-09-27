@@ -1,12 +1,20 @@
-import { useState } from 'react'
 import './App.css'
-import { LoginForm } from './components/LoginForm'
+import Categories from './components/Categories'
+import Settings from './components/Settings'
+import LoginForm from './components/LoginForm'
+import NoteCard from './components/NoteCard'
 
 function App() {
   // const [count, setCount] = useState(0)
 
   return (
-    <LoginForm />
+    <>
+     {/* just to check if these components are working */}
+    <Categories />
+    <Settings/>
+    <LoginForm/>
+ 
+    </>
   )
 }
 
