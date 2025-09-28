@@ -10,6 +10,9 @@ A collaborative notes application.
 ### Home Page
 ![Home Page](src/assets/Home%20Page.png)
 
+### Local Storage
+![Local Storage](src/assets/LocalStorage.png)
+
 ### Categories Page
 ![Categories Page](src/assets/category.png)
 
