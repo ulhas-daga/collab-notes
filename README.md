@@ -10,7 +10,7 @@ A collaborative notes application.
 ### Home Page
 ![Home Page](src/assets/Home%20Page.png)
 
-### Local Storage
+### Local Storage (Data stored mapped to each user via userId)
 ![Local Storage](src/assets/LocalStorage.png)
 
 ### Categories Page
