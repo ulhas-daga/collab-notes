@@ -8,6 +8,7 @@ import Sidebar from './components/Sidebar/Sidebar'
 import ProtectedRoute from './components/ProtectedRoute'
 import NavBar from './components/Navbar'
 import CategoryNotes from './components/CategoryView'
+import NoteEditor from './components/NoteEditor'
 // import NoteCard from './components/NoteCard'
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
           <Route path='/settings' element={<Settings/>} />
           <Route path='/categories' element={<Categories />} />
           <Route path="/categories/:name" element={<CategoryNotes />} />
+          <Route path='/noteform' element={<NoteEditor/>} />
         </Route>
       </Routes>
       </div>

@@ -1,19 +1,22 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import NoteCard from "../NoteCard";
 
-// Dummy notes data
-const notes = [
-  { title: "Meeting Notes", content: "Discuss Q3 targets and deadlines...", category: "Work", timestamp: "2025-09-25" },
-  { title: "Vacation Plan", content: "Planning for Goa trip...", category: "Personal", timestamp: "2025-09-20" },
-  { title: "App Idea", content: "Notes app with categories and tags...", category: "Ideas", timestamp: "2025-09-18" },
-  { title: "Bank Details", content: "Important account numbers stored...", category: "Important", timestamp: "2025-09-15" },
-  { title: "Grocery List", content: "Milk, Eggs, Bread, Butter...", category: "Others", timestamp: "2025-09-10" },
-];
-
 const CategoryView = () => {
   const { name } = useParams();
-  const filteredNotes = notes.filter((note) => note.category === name);
+  const userId = localStorage.getItem("userId");
+  const [filteredNotes, setFilteredNotes] = useState([]);
+
+  useEffect(() => {
+    let allNotes = localStorage.getItem("NotesData");
+    if (allNotes) {
+      allNotes = JSON.parse(allNotes);
+      const userNotes = allNotes.filter(
+        (note) => note.userId == userId && note.category === name
+      );
+      setFilteredNotes(userNotes);
+    }
+  }, [name, userId]);
 
   return (
     <div className="container my-5">
