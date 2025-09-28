@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Settings = () => {
   const [theme, setTheme] = useState("light");
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (theme === "dark") {
@@ -15,8 +17,16 @@ const Settings = () => {
 
   const toggleTheme = () => setTheme((prev) => (prev === "light" ? "dark" : "light"));
 
-  const handleLogout = () => alert("Logged out successfully!");
-  const handleClearNotes = () => alert("All notes cleared!");
+  const handleLogout = () =>{
+    localStorage.clear()
+    alert("Logged out successfully!");
+    navigate("/login")
+  }
+  const handleClearNotes = () => {
+    localStorage.setItem("NotesData", JSON.stringify([]))
+    alert("All notes cleared!");
+    navigate("/")
+  }
 
   return (
     <div className="container my-5 d-flex flex-column align-items-center gap-4">

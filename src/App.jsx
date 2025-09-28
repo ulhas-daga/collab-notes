@@ -7,6 +7,7 @@ import HomePage from './components/HomePage'
 import Sidebar from './components/Sidebar/Sidebar'
 import ProtectedRoute from './components/ProtectedRoute'
 import NavBar from './components/Navbar'
+import CategoryNotes from './components/CategoryView'
 // import NoteCard from './components/NoteCard'
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path='/settings' element={<Settings/>} />
           <Route path='/categories' element={<Categories />} />
+          <Route path="/categories/:name" element={<CategoryNotes />} />
         </Route>
       </Routes>
       </div>

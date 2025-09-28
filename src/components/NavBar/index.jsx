@@ -35,7 +35,7 @@ const NavBar = () => {
 
 
         {
-          (localStorage.getItem("token")) ? 
+          (localStorage.getItem("userId")) ? 
           <ul className="navbar-nav ms-auto">
             <li className="nav-item dropdown ms-3">
                 <a
@@ -45,16 +45,12 @@ const NavBar = () => {
                 role="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
+                style={{color: "black"}} 
                 >
                 <FaUserCircle size={24} className="me-1" />
                 Profile
                 </a>
                 <ul className="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
-                <li>
-                    <NavLink className="dropdown-item" to="/profile">
-                    <FaTachometerAlt className="me-2" /> Profile
-                    </NavLink>
-                </li>
                 <li>
                     <NavLink className="dropdown-item" onClick={handleLogout} to="/">
                     <FaSignOutAlt className="me-2" /> Logout
@@ -66,16 +62,7 @@ const NavBar = () => {
           </ul>
           :
           <ul className="navbar-nav ms-auto">
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/login">
-                Login
-              </NavLink>
-            </li>
-            <li className="nav-item d-flex align-items-center">
-              <NavLink className="btn btn-warning btn-sm ms-2" to="/register">
-                Register
-              </NavLink>
-            </li>
+            
           </ul>
 
         }
