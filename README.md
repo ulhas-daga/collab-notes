@@ -5,16 +5,19 @@ A collaborative notes application.
 ## Screenshots
 
 ### Login Page
-![Categories Page](src/assets/login.png)
+![Login Page](src/assets/login.png)
 
 ### Home Page
-![Categories Page](src/assets/Home_Page.png)
+![Home Page](src/assets/Home%20Page.png)
 
 ### Categories Page
 ![Categories Page](src/assets/category.png)
 
 ### Categories Page (Work folder)
-![Categories Page](src/assets/category-view.png)
+![Work_Folder Page](src/assets/category-view.png)
 
 ### Settings Page
 ![Settings Editor](src/assets/settings.png)
+
+### Dark Theme
+![Dark Theme](src/assets/dark-theme.png)
