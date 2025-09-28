@@ -20,4 +20,4 @@ A collaborative notes application.
 ![Settings Editor](src/assets/settings.png)
 
 ### Dark Theme
-![Dark Theme](src/assets/dark-theme.png)
+![Dark Theme](src/assets/dak-theme.png)
